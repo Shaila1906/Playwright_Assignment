@@ -3,7 +3,7 @@ import { LoginPage } from '../Pages/login'
 import { SignupPage } from '../Pages/signup'
 
 
-test('test', async ({ page }) => {
+test('Complete the sign-up process with Required fields', async ({ page }) => {
 
   const Login = new LoginPage(page)
   const signup = new SignupPage(page)

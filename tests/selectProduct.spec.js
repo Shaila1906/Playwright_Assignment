@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { SelectPage } from '../Pages/selectProduct'
 
-test('test', async ({ page }) => {
+test('Select Product Category', async ({ page }) => {
 
     const Select = new SelectPage(page)
 
