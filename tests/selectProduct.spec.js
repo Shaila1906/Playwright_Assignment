@@ -5,7 +5,7 @@ test('test', async ({ page }) => {
 
     const Select = new SelectPage(page)
 
-  await Select.gotoSelectPage()
-  await Select.select()
-  await expect(page).toHaveURL('https://automationexercise.com/category_products/6')
+  await Select.gotoSelectPage() //navigate to the product page
+  await Select.select() //selecting Mens>Jean option
+  await expect(page).toHaveURL('https://automationexercise.com/category_products/6') //verify if it lands on desired page or not
 });

@@ -11,11 +11,13 @@ exports.SelectPage = class SelectPage {
     }
 
     async gotoSelectPage(){
+
+        //navigate to the product page
         await this.page.goto('https://automationexercise.com/products');
     }
 
     async select(){
-        
+        //actions on Mens>Jeans
         await this.men_link.click()
         await this.jeans_link.click()
     }
