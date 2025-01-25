@@ -8,8 +8,6 @@ exports.HomePage = class HomePage {
         this.view_product = page.locator('div:nth-child(4) > .product-image-wrapper > .choose > .nav > li > a')
         
         
-        
-        //div.col-sm-4:nth-child(4) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)
     }
 
     async gotoHomePage(){

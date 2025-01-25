@@ -447,3 +447,26 @@ async function checkTodosInLocalStorage(page, title) {
     return JSON.parse(localStorage['react-todos']).map(i => i.title).includes(t);
   }, title);
 }
+
+
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://automationexercise.com/contact_us');
+  await page.getByRole('textbox', { name: 'Name' }).click();
+  await page.getByRole('textbox', { name: 'Name' }).fill('s');
+  await page.getByRole('textbox', { name: 'Email', exact: true }).click();
+  await page.getByRole('textbox', { name: 'Email', exact: true }).fill('s@gmail.com');
+  await page.getByRole('textbox', { name: 'Subject' }).click();
+  await page.getByRole('textbox', { name: 'Subject' }).fill('sssss');
+  await page.getByRole('textbox', { name: 'Your Message Here' }).click();
+  await page.getByRole('textbox', { name: 'Your Message Here' }).fill('ssssss');
+  await page.locator('input[name="upload_file"]').click();
+  await page.locator('input[name="upload_file"]').setInputFiles('testData.txt');
+  page.once('dialog', dialog => {
+    console.log(`Dialog message: ${dialog.message()}`);
+    dialog.dismiss().catch(() => {});
+  });
+  await page.getByRole('button', { name: 'Submit' }).click();
+  await expect(page.locator('#contact-page')).toContainText('Success! Your details have been submitted successfully.');
+});
