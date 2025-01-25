@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../Pages/login'
+import { SignupPage0 } from '../Pages/signup0'
 import { SignupPage } from '../Pages/signup'
 
 test('Complete the sign-up process with Nonrequired fields', async ({ page }) => {
 
-  const Login = new LoginPage(page)
+  const Login = new SignupPage0(page)
   const signup = new SignupPage(page)
 
   await Login.gotoLoginPage()
