@@ -31,7 +31,7 @@ test('API GET Request', async ({ request }) => {
 
     const text = await response.text();
     expect(text).toContain('Polo', 'Babyhug', 'Biba'); //verifing respose contains Polo, Babuhug & Biba
-    expect(text).toContain('Heineken', 'BMW', 'Razor'); //verifing it doesn't contain Heineken, BMW & Razor
+    expect(text).toContain('Heineken', 'BMW', 'Razor'); //verifing it doesn't contain Heineken, BMW & Razor by throwing error
 
 
 })
