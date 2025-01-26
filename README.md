@@ -109,6 +109,8 @@ The project follows the Page Object Model (POM) structure for maintainable and s
 - **Reusability:** Centralized and reusable methods for interacting with web elements.
 
 - **Reporting:** Provides detailed HTML reports for test results.
+- **Handling Sensitive Data:**
+   Normally, sensitive data like email and password should be stored securely in a .env file and accessed using environment variables to ensure privacy and security. However, for the purposes of this assignment, these values were hardcoded directly into the scripts to simplify execution. This approach is not recommended for production environments
 
 ---
 
