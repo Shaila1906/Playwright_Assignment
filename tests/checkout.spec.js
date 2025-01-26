@@ -14,7 +14,7 @@ test('Checkout', async ({ page }) => {
     await LogIn.gotoLoginPage();
     await LogIn.login('shaila1999@gmail.com', 'shaila1234')
 
-    //await SelectProduct.gotoHomePage();
+    
     await SelectProduct.selectView();
 
     await ViewProduct.quantity_update('2');

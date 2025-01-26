@@ -35,9 +35,7 @@ exports.SignupPage = class SignupPage {
 
     }
 
-    // async gotoLoginPage(){
-    //     await this.page.goto('https://automationexercise.com/login');
-    // }
+    //actions
 
     async signupWithRequired(password, firstName, lastName, address1, country, state, city, zipcode, mblnumber){
         await this.password_textbox.fill(password)
