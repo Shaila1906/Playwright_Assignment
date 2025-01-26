@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../Pages/homePage'
-import { ViewPage } from '../Pages/viewPage';
+import { HomePage } from '../../Pages/homePage'
+import { ViewPage } from '../../Pages/viewPage';
 
 test('View and Update Product', async ({ page }) => {
 

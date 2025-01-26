@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../Pages/homePage';
-import { ViewPage } from '../Pages/viewPage';
-import { LogInPage } from '../Pages/loginPage';
-import { Checkout } from '../Pages/checkoutPage';
+import { HomePage } from '../../Pages/homePage';
+import { ViewPage } from '../../Pages/viewPage';
+import { LogInPage } from '../../Pages/loginPage';
+import { Checkout } from '../../Pages/checkoutPage';
 
 test('Checkout', async ({ page }) => {
 

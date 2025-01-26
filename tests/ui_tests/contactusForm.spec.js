@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { ContactusPage } from '../Pages/contactusPage';
+import { ContactusPage } from '../../Pages/contactusPage';
 const path = require('path');
 
 test('Filling the Contact Us Form', async ({ page }) => {
