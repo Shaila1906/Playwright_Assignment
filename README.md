@@ -1,14 +1,16 @@
 # Automated UI Testing Project
 
 ## **Project Overview**
-This project automates the UI testing for a sample web application using **Playwright**. The tests are implemented using the **Page Object Model (POM)** for maintainability and scalability. Proper assertions are included to validate the UI functionality.
+This project automates the **UI** & **API** testing for a sample web application using **Playwright**. The tests are implemented using the **Page Object Model (POM)** for maintainability and scalability. Proper assertions are included to validate the UI & API functionality.
 
 ---
 
 ## **Features**
 - Automates critical UI workflows like form submissions, navigation, and element visibility.
 - Implements the **Page Object Model (POM)** for organized and modular test logic.
-- Includes proper assertions to ensure reliable validation of UI behavior.
+- Includes proper assertions to ensure reliable validation of UI & API behavior.
+- Uses https://automationexercise.com/ as sample web application.
+
 
 ---
 
@@ -18,6 +20,7 @@ Follow these steps to set up and run the UI tests:
 ### **Pre-requisites**
 - **Node.js** 
 - **NPM** (Node Package Manager)
+- **Playwright**
 - **Git**
 
 ### **Clone the Repository**
@@ -40,15 +43,24 @@ To get started with Playwright, you'll need to install the required Node.js pack
 
 2. Install Playwright browsers (required for Playwright to function properly):
    ```bash
-   npm install playwright
+   npm install playwright@latest
    ```
 
 ## **How to Run the Tests**
-To execute the UI test suite:
+To execute the both UI & API test suite:
 
  ```bash
      npx playwright tests
 ```
+To execute only UI test suite:
+ ```bash
+     npx playwright tests --project="UI Tests"
+```
+To execute only API test suite:
+ ```bash
+     npx playwright tests --project="API Tests"
+```
+
 ### **View Test Results**
 1. Test results will appear in the terminal.
 2. To generate and view a detailed HTML report:
@@ -62,24 +74,28 @@ To execute the UI test suite:
 The project follows the Page Object Model (POM) structure for maintainable and scalable test code:
   ```bash
 
-├── pages/                    # Page Object files
-│   ├── checkoutPage.js       # Checkout page locators and methods
-│   ├── contactusPage.js      # Contact us page locators and methods
-│   ├── homePage.js           # Home page locators and methods
-│   ├── loginPage.js          # Login page locators and methods
-│   ├── selectProduct.js      # Product selecting page locators and methods
-│   ├── signup.js             # Signup form page locators and methods
-│   ├── viewPage.js           # Product Viewing page locators and methods
-├── tests/                    # UI test files
-│   ├── addtocart.spec.js     # UI test cases for qus4(adding product to cart)
-│   ├── checkout.spec.js      # UI test cases for qus5(proceed to checout)
-│   ├── contactusForm.spec.js # UI test cases foe qus6(filling contactusForm)
-│   ├── selectProduct.spec.js # UI test cases for qus3(catagory select)
-│   ├── signupWithNon.spec.js # UI test cases for qus2(non-requied fields)
-│   ├── signupWithRe.spec.js  # UI test cases for qus2(required fields)
-├── playwright.config.js      # Playwright configuration
-├── README.md                 # Readme file
-├── package.json              # Project dependencies
+├── pages/                         # Page Object files
+│   ├── checkoutPage.js            # Checkout page locators and methods
+│   ├── contactusPage.js           # Contact us page locators and methods
+│   ├── homePage.js                # Home page locators and methods
+│   ├── loginPage.js               # Login page locators and methods
+│   ├── selectProduct.js           # Product selecting page locators and methods
+│   ├── signup.js                  # Signup form page locators and methods
+│   ├── viewPage.js                # Product Viewing page locators and methods
+├── tests/                         # Test folder
+│   ├── api_tests/                 # API test files
+│   │    ├── getPost.spec.js       # API test file for GET & POST
+│   │
+│   ├──ui_tests/                   # UI test files
+│        ├── addtocart.spec.js     # UI test cases for qus4(adding product to car
+│        ├── checkout.spec.js      # UI test cases for qus5(proceed to checout)
+│        ├── contactusForm.spec.js # UI test cases foe qus6(filling contactusForm)
+│        ├── selectProduct.spec.js # UI test cases for qus3(catagory select)
+│        ├── signupWithNon.spec.js # UI test cases for qus2(non-requied fields)
+│        ├── signupWithRe.spec.js  # UI test cases for qus2(required fields)
+├── playwright.config.js           # Playwright configuration
+├── README.md                      # Readme file
+├── package.json                   # Project dependencies
 
  ```
  ---
