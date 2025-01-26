@@ -27,7 +27,7 @@ test('Checkout', async ({ page }) => {
 
     await expect(page.locator('#form')).toContainText('Order Placed!'); //verifying if the order is placed or not
 
-
+    await page.close();
 
     
 

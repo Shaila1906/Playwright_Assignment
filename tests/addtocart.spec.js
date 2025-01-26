@@ -14,7 +14,7 @@ test('View and Update Product', async ({ page }) => {
     await ViewProduct.addToCart()           //adding to cart
     await expect(page.getByRole('heading', { name: 'Added!' })).toBeVisible() //verifying if it's added to cart or not
 
-
+    await page.close();
 
 
   

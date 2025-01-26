@@ -28,11 +28,7 @@ exports.ContactusPage = class ContactusPage{
         await this.Email_textbox.fill(email);
         await this.subject_textbox.fill(subject);
         await this.message_textbox.fill(message);
-        //await this.fileUpload_option.click();
-        // await this.fileUpload_option.setInputFiles(data);
-        // const filePath = path.join(__dirname, data); // Path to the file to upload
-        // await this.setInputFiles('input[type="file"]', filePath);
-        //await this.submit_button.click();
+        
 
         
     }
@@ -45,13 +41,10 @@ exports.ContactusPage = class ContactusPage{
     async submitForm() {
         // Click the submit button
         await this.submit_button.click();
+        
     }
 
-    // async verifySubmissionSuccess() {
-    //     // Verify the success message appears
-    //     await this.successMessage.waitFor();
-    //     return this.successMessage.textContent();
-    // }
+    
 
 
 
